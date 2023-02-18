@@ -26,6 +26,9 @@ public class TablesPage extends TestBase {
         WebElement result=Driver.getDriver().findElement(By.xpath("//table["+table+"]//tbody//tr["+row+"]//td["+blok+"]"));
         System.out.println("Secilen tablo= "+table+" , Secilen satir= "+row+" , Secilen stun ise= "+blok+" dir. Sonuc= "
                 +result.getText());
-
+    }
+    public String tabloReturn(int table, int row, int blok){
+        WebElement result=Driver.getDriver().findElement(By.xpath("//table["+table+"]//tbody//tr["+row+"]//td["+blok+"]"));
+      return result.getText();
     }
 }

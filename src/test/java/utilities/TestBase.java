@@ -1,11 +1,20 @@
 package utilities;
 
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.asserts.SoftAssert;
+import pages.DownloadPage;
+import pages.GuruDragPage;
+
+import java.time.Duration;
 
 public class TestBase {
     protected Actions actions = new Actions(Driver.getDriver());
+    public WebDriverWait waitObje1 = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));//explicitly wait
+    public GuruDragPage guruDragPage=new GuruDragPage();
+    public SoftAssert softAssert=new SoftAssert();
 
     @BeforeMethod
     public void setup(){

@@ -10,7 +10,6 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBase;
 
-import java.time.Duration;
 
 public class WaitKlasi extends TestBase {
 
@@ -19,10 +18,8 @@ public class WaitKlasi extends TestBase {
         Driver.getDriver().get(ConfigReader.getProperty("herokup3"));
         Driver.getDriver().findElement(By.xpath("//*[.='Remove']")).click();
 
-
         String expectedText = "It's gone!";
 
-        WebDriverWait waitObje1 = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));//explicitly wait
         String actualText = waitObje1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@id='message']"))).getText();
 
         Assert.assertEquals(actualText, expectedText);

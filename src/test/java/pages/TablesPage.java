@@ -31,4 +31,8 @@ public class TablesPage extends TestBase {
         WebElement result=Driver.getDriver().findElement(By.xpath("//table["+table+"]//tbody//tr["+row+"]//td["+blok+"]"));
       return result.getText();
     }
+//    public WebElement tabloStun(int tabloNo, int satirNo, int stunNo){
+//        WebElement element = Driver.getDriver().findElement(By.xpath("//table["+tabloNo+"]//tbody//tr["+satirNo+"]//td["+stunNo+"]"));
+//        return element;
+//    }
 }

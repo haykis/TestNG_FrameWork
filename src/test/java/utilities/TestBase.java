@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
 import pages.DownloadPage;
 import pages.GuruDragPage;
+import pages.TablesPage;
 
 import java.time.Duration;
 
@@ -15,6 +16,7 @@ public class TestBase {
     public WebDriverWait waitObje1 = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));//explicitly wait
     public GuruDragPage guruDragPage=new GuruDragPage();
     public SoftAssert softAssert=new SoftAssert();
+
 
     @BeforeMethod
     public void setup(){

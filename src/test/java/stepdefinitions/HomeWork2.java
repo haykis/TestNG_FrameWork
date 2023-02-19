@@ -15,7 +15,6 @@ public class HomeWork2 extends TestBase {
         Driver.waitBasic(1);
         try{
             Driver.getDriver().switchTo().frame("gdpr-consent-notice"); //id ile gittim
-            Driver.waitBasic(1);
             Driver.getDriver().findElement(By.xpath("(//span[.='Tümünü Kabul Et'])[1]")).click();
         }catch (Exception e){
             System.out.println("cookies cikmadi");
@@ -23,8 +22,8 @@ public class HomeWork2 extends TestBase {
         Driver.waitBasic(1);
         actions.clickAndHold(guruDragPage.textBank).moveToElement(guruDragPage.debitAccount).release().perform();
         actions.clickAndHold(guruDragPage.textSales).moveToElement(guruDragPage.creditAccount).release().perform();
-        actions.clickAndHold(guruDragPage.obj5000left).moveToElement(guruDragPage.debitAmount).release().perform();
-        actions.clickAndHold(guruDragPage.obj5000right).moveToElement(guruDragPage.creditAmount).release().perform();
+        actions.dragAndDrop(guruDragPage.obj5000left,guruDragPage.debitAmount).perform();
+        actions.dragAndDrop(guruDragPage.obj5000right,guruDragPage.creditAmount).perform();
         Driver.waitBasic(1);
         //**************************
         softAssert.assertEquals("5000",guruDragPage.debitMovement.getText(), "Debit Movement is wrong");

@@ -31,7 +31,6 @@ public class HomeWork3 {
 
         Assert.assertTrue(buyukElli.toString().contains("100.0"));
     }
-
     @Test
     public void test02(){
         Driver.getDriver().get(ConfigReader.getProperty("herokup6"));

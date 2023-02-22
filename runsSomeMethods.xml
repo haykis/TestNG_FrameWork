@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite 3">
+    <test name="Test 3">
+        <classes>
+            <class name="smokeTest.Alert">
+                <methods>
+                    <!--Command + / => I want to run only invalidID test-->
+                    <!--                    exclude means run all but this method-->
+                    <!--                    include means run ONLY that specific method-->
+                    <include name="rightClickTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test Suite 4">
+        <classes>
+            <class name="stepdefinitions.Cookies1">
+                <methods>
+                    <!--Command + / => I want to run only invalidID test-->
+                    <!--                    exclude means run all but this method-->
+                    <!--                    include means run ONLY that specific method-->
+                    <exclude name="test01"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

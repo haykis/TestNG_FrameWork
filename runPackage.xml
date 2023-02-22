@@ -6,3 +6,5 @@
         </packages>
     </test>
 </suite>
+
+<!--  <package name=".*"></package>  yukariya bunu koyarsak, bu sekilde butun paketleri kosar-->
